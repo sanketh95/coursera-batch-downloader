@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Coursera Downloader",
+  "description": "Gives the hierarchy of the videos in coursera in json format",
+  "version": "1.0",
+
+  "permissions": [
+    "https://class.coursera.org/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://class.coursera.org/*/lecture"],
+      "js": ["jquery.js","myscript.js"],
+      "run_at":"document_end"
+    }
+  ]
+}
