@@ -1,0 +1,3 @@
+class AuthenticationFailure(BaseException):
+	pass
+

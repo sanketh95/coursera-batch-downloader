@@ -1,11 +1,12 @@
 var jsondata='';
+var coursename = location.pathname.match(/\/(.*)\//)[1];
+
 $('.course-item-list-header').each( function(index, val){
 	var name = $('h3',this).html();
 	var selection_list = $('.course-item-list-section-list:eq('+index+')');
 	var pattern = new RegExp('nbsp;[ \t]*(.*)');
 	var re = pattern.exec(name);
 	var fname = re[re.length-1	];
-
 
 	jsondata = jsondata+'{ "title" : "'+fname+'","links":[';
 	$('li',selection_list).each(function(ind, val){
@@ -20,4 +21,4 @@ $('.course-item-list-header').each( function(index, val){
 });
 
 jsondata= jsondata.replace(/(^,)|(,$)/g , '');
-console.log('{"data":['+jsondata+']}');
+console.log('{"cname":"'+coursename+'","data":['+jsondata+']}');
