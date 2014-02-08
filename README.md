@@ -1,1 +1,1 @@
-A simple coursera video downloader using curl and inspired by coursera-dl
+A simple coursera video downloader using curl and inspired from coursera-dl
