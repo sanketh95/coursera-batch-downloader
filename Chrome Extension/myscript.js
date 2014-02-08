@@ -10,7 +10,7 @@ $('.course-item-list-header').each( function(index, val){
 
 	jsondata = jsondata+'{ "title" : "'+fname+'","links":[';
 	$('li',selection_list).each(function(ind, val){
-		var linkaddr = $('a:eq(2)',$('.course-lecture-item-resource',this)).attr('href');
+		var linkaddr = $('a:last-child',$('.course-lecture-item-resource',this)).attr('href');
 		var title=$('a', this).html();
 		title = title.replace(/^\s+|\s+$/g,'')	
 		jsondata = jsondata+'{"title":"'+title+'","link":"'+linkaddr+'"},';
